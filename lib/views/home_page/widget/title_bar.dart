@@ -156,7 +156,7 @@ Widget HomeView(BuildContext context) {
                               ),
                               const Gap(4),
                               Text(
-                                "Athena Capital Management LLC",
+                                "Athena Capital \nanagement LLC",
                                 style: myTextStyle(
                                   color: darkBlueColor,
                                   fontSize: 12,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
+import '../../responsive.dart';
 import '../../utils/const.dart';
 import '../../utils/style.dart';
 
@@ -11,7 +12,7 @@ class SupportScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 20),
+        padding: Responsive.isMobile(context) ? const EdgeInsets.symmetric(horizontal: 40, vertical: 4):EdgeInsets.symmetric(horizontal: 150, vertical: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,

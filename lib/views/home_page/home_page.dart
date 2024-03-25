@@ -18,6 +18,8 @@ import '../carrer_view/widget/data_programmer_view.dart';
 import '../carrer_view/widget/financial_infrastructure_programmer.dart';
 import '../contact/contact_view.dart';
 
+
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
@@ -48,7 +50,6 @@ class _MyHomePageState extends State<MyHomePage> {
         return const ManagementView();
       case 'contact':
         return ContactView();
-      
       case 'benefits':
         return BenefitsView();
       case 'data_programmer':
