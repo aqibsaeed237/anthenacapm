@@ -8,8 +8,6 @@ import 'package:gap/gap.dart';
 import '../../../responsive.dart';
 import '../../home_page/widget/footer_widget.dart';
 
-
-
 class FinancialInfrastructureProgrammerView extends StatelessWidget {
   const FinancialInfrastructureProgrammerView({super.key});
 
@@ -30,7 +28,10 @@ class FinancialInfrastructureProgrammerView extends StatelessWidget {
                       color: Color(0xffF5F5F5),
                     ),
                     child: Padding(
-                      padding: Responsive.isMobile(context) ? EdgeInsets.symmetric(horizontal: 40, vertical:4 ): EdgeInsets.symmetric(horizontal: 180.0, vertical: 4),
+                      padding: Responsive.isMobile(context)
+                          ? EdgeInsets.symmetric(horizontal: 40, vertical: 4)
+                          : EdgeInsets.symmetric(
+                              horizontal: 180.0, vertical: 4),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,7 +41,7 @@ class FinancialInfrastructureProgrammerView extends StatelessWidget {
                             style: myTextStyle(
                               color: darkBlueColor,
                               fontWeight: FontWeight.w700,
-                              fontSize: Responsive.isMobile(context) ?26: 30,
+                              fontSize: Responsive.isMobile(context) ? 20 : 30,
                             ),
                           ),
                           Text(
@@ -56,7 +57,9 @@ class FinancialInfrastructureProgrammerView extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: Responsive.isMobile(context) ? EdgeInsets.symmetric(horizontal: 40, vertical:4 ): EdgeInsets.symmetric(horizontal: 180.0, vertical: 4),
+                    padding: Responsive.isMobile(context)
+                        ? EdgeInsets.symmetric(horizontal: 40, vertical: 4)
+                        : EdgeInsets.symmetric(horizontal: 180.0, vertical: 4),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,10 +83,10 @@ class FinancialInfrastructureProgrammerView extends StatelessWidget {
                         ),
                         Text(
                           "      . A degree in computer science, mathematics, physics, statistics, or a related field\n"
-                              "      . An outstanding academic record\n"
-                              "      . Strong analytical and programming skills\n"
-                              "      . Experience in Java/Kotlin and PostgreSQL databases\n"
-                              "      . Experience in Advent Geneva or SWIFT (considered a plus)",
+                          "      . An outstanding academic record\n"
+                          "      . Strong analytical and programming skills\n"
+                          "      . Experience in Java/Kotlin and PostgreSQL databases\n"
+                          "      . Experience in Advent Geneva or SWIFT (considered a plus)",
                           style: myTextStyle(color: blackColor, fontSize: 12),
                         ),
                         const Gap(6),
@@ -95,17 +98,20 @@ class FinancialInfrastructureProgrammerView extends StatelessWidget {
                           children: [
                             Text(
                               "Salary Range: ",
-                              style: myTextStyle(color: darkBlueColor, fontSize: 12),
+                              style: myTextStyle(
+                                  color: darkBlueColor, fontSize: 12),
                             ),
                             Text(
                               " \$132,000 - \$198,000",
-                              style: myTextStyle(color: lightBlack, fontSize: 12),
+                              style:
+                                  myTextStyle(color: lightBlack, fontSize: 12),
                             ),
                           ],
                         ),
                         Text(
                           "Explore Benefit >",
-                          style: myTextStyle(color: const Color(0xff085FB1), fontSize: 12),
+                          style: myTextStyle(
+                              color: const Color(0xff085FB1), fontSize: 12),
                         ),
                         const Gap(8),
                         ElevatedButton(
@@ -114,9 +120,11 @@ class FinancialInfrastructureProgrammerView extends StatelessWidget {
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: darkBlueColor,
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(4)),
                           ),
-                          child: Text("Apply Now", style: myTextStyle(color: Colors.white)),
+                          child: Text("Apply Now",
+                              style: myTextStyle(color: Colors.white)),
                         ),
                         const Gap(6),
                         Text(
