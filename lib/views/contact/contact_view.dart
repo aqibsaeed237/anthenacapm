@@ -8,7 +8,8 @@ class ContactField extends StatelessWidget {
   final bool isOptional;
   final TextEditingController controller;
 
-  const ContactField({super.key, 
+  const ContactField({
+    super.key,
     required this.label,
     this.isOptional = false,
     required this.controller,
@@ -16,6 +17,8 @@ class ContactField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int? maxLength = label == 'Message' ? 3000 : null;
+    double? height = label == 'Message' ? 60 : 34;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -25,7 +28,7 @@ class ContactField extends StatelessWidget {
         ),
         Container(
           width: 300,
-          height: 34,
+          height: height,
           margin: const EdgeInsets.symmetric(vertical: 6),
           padding: const EdgeInsets.symmetric(horizontal: 10),
           decoration: BoxDecoration(
@@ -33,7 +36,11 @@ class ContactField extends StatelessWidget {
           ),
           child: TextFormField(
             controller: controller,
+            maxLength: maxLength,
+            maxLines: null,
             decoration: InputDecoration(
+
+              counterText: '',
               hintText: 'Enter $label',
               border: InputBorder.none,
             ),
@@ -74,10 +81,17 @@ class ContactView extends StatelessWidget {
               ),
               const Gap(2),
               ContactField(label: "Name", controller: nameController),
-              ContactField(label: "Company", isOptional: true, controller: companyController),
+              ContactField(
+                  label: "Company",
+                  isOptional: true,
+                  controller: companyController),
               ContactField(label: "Email", controller: emailController),
-              ContactField(label: "Phone", isOptional: true, controller: phoneController),
-              ContactField(label: "Reason for Contact", controller: reasonController),
+              ContactField(
+                  label: "Phone",
+                  isOptional: true,
+                  controller: phoneController),
+              ContactField(
+                  label: "Reason for Contact", controller: reasonController),
               ContactField(label: "Message", controller: messageController),
               const Gap(8),
               ElevatedButton(
@@ -86,7 +100,8 @@ class ContactView extends StatelessWidget {
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: darkBlueColor,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(4)),
                 ),
                 child: Text("Submit", style: myTextStyle(color: Colors.white)),
               ),
